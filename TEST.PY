@@ -6,7 +6,7 @@ ACCESS_TOKEN = "91e2e541450bf6936653103a81dacd0e"
 
 # Lista de personajes de Marvel Rivals basada en fuentes de la comunidad
 marvel_rivals_roster = [
-    "Adam Warlock", "Angela", "Black Panther", "Black Widow", "Blade", "Hulk",
+    "Frozono","Adam Warlock", "Angela", "Black Panther", "Black Widow", "Blade", "Hulk",
     "Captain America", "Cloak and Dagger", "Doctor Strange", "Emma Frost",
     "Groot", "Hawkeye", "Hela", "Human Torch", "Invisible Woman", "Iron Fist",
     "Iron Man", "Jean Grey", "Jeff the Land Shark", "Loki", "Luna Snow",
@@ -48,14 +48,11 @@ def process_marvel_rivals_roster():
             nombre = hero_data.get('name')
             imagen_url = hero_data.get('image', {}).get('url')
             base = hero_data.get('work', {}).get('base')
-            # Extraer la primera aparición de la propiedad 'biography'
-            primera_aparicion = hero_data.get('biography', {}).get('first-appearance')
             nacimiento = hero_data.get('biography', {}).get('place-of-birth')
             
             print(f"Nombre: {nombre}")
             print(f"Imagen: {imagen_url}")
             print(f"Base de operaciones: {base}")
-            print(f"Primera aparición: {primera_aparicion}")
             print(f"Lugar de nacimiento: {nacimiento}")
             print("-" * 20)
         else:
